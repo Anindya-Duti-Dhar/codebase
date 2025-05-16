@@ -20,12 +20,7 @@ A Flutter application demonstrating clean architecture using **Cubit (BLoC)**, *
 
 The project follows a simple and scalable **Clean Code Architecture**:
 
-lib/ 
-├── core/ # Core utilities (Dio client, connectivity checker)
-├── data/ # API services and models 
-├── logic/ # Business logic with BLoC Cubit 
-├── presentation/ # UI screens and widgets 
-└── main.dart # Entry point
+<pre lang="markdown"> ``` lib/ ├── core/ # Core utilities (Dio client, connectivity checker) ├── data/ # API services and models ├── logic/ # Business logic with BLoC Cubit ├── presentation/ # UI screens and widgets └── main.dart # Entry point ``` </pre>
 
 ## 📦 Packages Used
 

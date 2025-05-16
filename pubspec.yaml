@@ -45,19 +45,19 @@ dependencies:
   cached_network_image:
 
 dev_dependencies:
-  flutter_launcher_icons:
+  #flutter_launcher_icons:
   flutter_test:
     sdk: flutter
 
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  remove_alpha_ios: true
-  image_path: "assets/images/app_icon.png"
-  adaptive_icon_background: "#ffffff"
-  #adaptive_icon_background: "#7265E2"
-  adaptive_icon_foreground: "assets/images/app_icon.png"
-  min_sdk_android: 24 # android min sdk min:16, default 21
+#flutter_launcher_icons:
+#  android: "launcher_icon"
+#  ios: true
+#  remove_alpha_ios: true
+#  image_path: "assets/images/app_icon.png"
+#  adaptive_icon_background: "#ffffff"
+#  #adaptive_icon_background: "#7265E2"
+#  adaptive_icon_foreground: "assets/images/app_icon.png"
+#  min_sdk_android: 24 # android min sdk min:16, default 21
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
