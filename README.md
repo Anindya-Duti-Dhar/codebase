@@ -20,11 +20,11 @@ A Flutter application demonstrating clean architecture using **Cubit (BLoC)**, *
 
 The project follows a simple and scalable **Clean Code Architecture**:
 
-lib/
+lib/ 
 ├── core/ # Core utilities (Dio client, connectivity checker)
-├── data/ # API services and models
-├── logic/ # Business logic with BLoC Cubit
-├── presentation/ # UI screens and widgets
+├── data/ # API services and models 
+├── logic/ # Business logic with BLoC Cubit 
+├── presentation/ # UI screens and widgets 
 └── main.dart # Entry point
 
 ## 📦 Packages Used
@@ -40,6 +40,46 @@ lib/
 ## 🔗 API Used
 
 - [https://reqres.in/api/users](https://reqres.in/api/users)
-
 Supports pagination with parameters:
 - `?page=1&per_page=10`
+
+## 🧪 Key Features Explained
+
+✅ Pull to Refresh
+Implemented using RefreshIndicator to reload the first page of data and reset pagination.
+
+✅ Infinite Scroll Pagination
+Detects scroll position and triggers next page fetch automatically when the user scrolls near the bottom.
+
+✅ Local Search
+Filters the already fetched users by name using simple string matching.
+
+✅ Connectivity Check
+Checks internet connection before calling the API. Displays a toast if offline.
+
+✅ Cached Images
+Profile pictures are loaded and cached using cached_network_image for better performance and offline support.
+
+✅ Empty and Error UI States
+Handles:
+- API failure with a friendly error message.
+- Empty result after search or API response with “No users found”.
+
+📄 Manual JSON Parsing
+User model is manually parsed using code generated from https://app.quicktype.io to avoid using code generation libraries.
+
+## 🧹 Improvements Possible
+
+- Add unit/widget tests.
+- Add persistent local caching with Hive/SharedPreferences.
+- Add dependency injection using get_it.
+- Improve accessibility and localization.
+
+## 🧑‍💻 Author
+
+Anindya Duti Dhar
+GitHub: @Anindya-Duti-Dhar
+
+## 📝 License
+
+This project is for example purposes only and not licensed for production use.
