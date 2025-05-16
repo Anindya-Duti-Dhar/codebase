@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:codebase/presentation/widget/rf_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class AvatarWidget extends StatelessWidget {
 
@@ -33,7 +34,17 @@ class AvatarWidget extends StatelessWidget {
       child: ClipOval(
         child: CachedNetworkImage(
           imageUrl: urlString,
-          placeholder: (context, url) => CircularProgressIndicator(strokeWidth: 2),
+          imageBuilder: (context, imageProvider) => CircleAvatar(
+            backgroundImage: imageProvider,
+            radius: 30,
+          ),
+          placeholder: (context, url) => Container(
+            color: Colors.white,
+            child: SpinKitFadingCircle(
+              color: Colors.grey,
+              size: 40.w,
+            ),
+          ),
           errorWidget: (context, url, error) => Icon(Icons.error),
           width: (size ?? 48).w,
           height: (size ?? 48).h,

@@ -9,7 +9,13 @@ class API {
 
   //region Core API
   Future<Response> apiCore({required String address, required String method, String? headerValue, var json}) async {
-    var dio = Dio();
+    var dio = Dio(
+      BaseOptions(
+        connectTimeout: const Duration(seconds: 10), // time to connect
+        receiveTimeout: const Duration(seconds: 10), // time to receive data
+        sendTimeout: const Duration(seconds: 10), // time to send request
+      ),
+    );
     if(headerValue == null || headerValue.toString().isEmpty) {
       headerValue = "reqres-free-v1";
     }
@@ -68,15 +74,21 @@ class API {
         apiRequestResponse['Packet'] = '';
         return json.encode(apiRequestResponse);
       }
-    } on SocketException {
+    } on SocketException catch (e) {
       apiRequestResponse['Success'] = false;
-      apiRequestResponse['Message'] = 'SocketException';
+      apiRequestResponse['Message'] = 'SocketException : ${e.message}';
       apiRequestResponse['Packet'] = '';
       return json.encode(apiRequestResponse);
-    }  on DioException {
+    }  on DioException catch (e) {
       apiRequestResponse['Success'] = false;
-      apiRequestResponse['Message'] = 'DioException';
       apiRequestResponse['Packet'] = '';
+      if (e.type == DioExceptionType.connectionTimeout ||
+          e.type == DioExceptionType.sendTimeout ||
+          e.type == DioExceptionType.receiveTimeout) {
+        apiRequestResponse['Message'] = 'DioException : Time out';
+      } else {
+        apiRequestResponse['Message'] = 'DioException : ${e.message}';
+      }
       return json.encode(apiRequestResponse);
     } catch (ex) {
       apiRequestResponse['Success'] = false;
