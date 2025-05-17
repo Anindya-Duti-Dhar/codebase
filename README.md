@@ -28,21 +28,13 @@ lib/
 ├── presentation/ # UI screens and widgets 
 └── main.dart # Entry point ``` </pre>
 
-## 📦 Packages Used
+## 📱 Screenshots
 
-| Package                | Purpose                                    |
-|------------------------|--------------------------------------------|
-| `flutter_bloc`         | State management using Cubit               |
-| `dio`                  | Networking and API calls                   |
-| `cached_network_image` | Image caching and loading                  |
-| `connectivity_plus`    | Internet connectivity monitoring           |
-| `fluttertoast`         | Display toast messages                     |
+### 🔹 User List Screen
+![User List Screen](assets/screenshots/home_screen.png)
 
-## 🔗 API Used
-
-- [https://reqres.in/api/users](https://reqres.in/api/users)
-Supports pagination with parameters:
-- `?page=1&per_page=10`
+### 🔹 User Detail Screen
+![User Detail Screen](assets/screenshots/user_details.png)
 
 ## 🧪 Key Features Explained
 
@@ -65,6 +57,23 @@ Profile pictures are loaded and cached using cached_network_image for better per
 Handles:
 - API failure with a friendly error message.
 - Empty result after search or API response with “No users found”.
+
+
+## 📦 Packages Used
+
+| Package                | Purpose                                    |
+|------------------------|--------------------------------------------|
+| `flutter_bloc`         | State management using Cubit               |
+| `dio`                  | Networking and API calls                   |
+| `cached_network_image` | Image caching and loading                  |
+| `connectivity_plus`    | Internet connectivity monitoring           |
+| `fluttertoast`         | Display toast messages                     |
+
+## 🔗 API Used
+
+- [https://reqres.in/api/users](https://reqres.in/api/users)
+Supports pagination with parameters:
+- `?page=1&per_page=10`
 
 📄 Manual JSON Parsing
 User model is manually parsed using code generated from https://app.quicktype.io to avoid using code generation libraries.

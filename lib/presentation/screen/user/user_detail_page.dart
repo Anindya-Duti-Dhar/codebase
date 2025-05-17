@@ -27,7 +27,7 @@ class UserDetailPage extends StatelessWidget {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFF1F1F1),
         appBar: RFAppBar(
           titleText: 'User Details',
           titleSize: 18.sp,
@@ -36,7 +36,7 @@ class UserDetailPage extends StatelessWidget {
           },
         ).build(),
         body: Container(
-          color: Colors.white54 ,//Color(0xFFF1F1F1),
+          color: Color(0xFFF1F1F1),
           child: mainBody(context: context),
         ),
       ),
