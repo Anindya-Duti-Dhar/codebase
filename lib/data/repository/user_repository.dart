@@ -7,15 +7,17 @@ import '../../core/constant.dart';
 
 class UserRepository {
 
-  API api = API();
-  final _appUtils = AppUtils();
+  final API api;
+  final AppUtils appUtils;
+
+  UserRepository({required this.api, required this.appUtils});
 
   //region User List Fetch
   Future userListFetch({int? pageNo, required Function(bool isSuccess, String message, UserResponse data) onComplete}) async {
     UserResponse userResponse = UserResponse();
-    await _appUtils.checkInternet().then((value) async {
+    await appUtils.checkInternet().then((value) async {
       if (!value.contains('ignore')) {
-        String url = '${Constant.baseUrl}/users';
+        String? url = '${Constant.baseUrl}/users';
         if(pageNo != null){
           url = '$url?per_page=${Constant.pageSize}&page=$pageNo';
         }
@@ -35,7 +37,7 @@ class UserRepository {
             onComplete(false, 'User Fetching Error!\n${ex.toString()}', userResponse);
           }
         } else {
-          onComplete(false, 'User Fetching Error!\n$message', userResponse);
+          onComplete(false, 'User Fetching Error!\n${message ?? ''}', userResponse);
         }
       } else {
         onComplete(false, "Internet Error!\nYou are offline, please check your internet connection.", userResponse);

@@ -1,4 +1,5 @@
 
+import 'package:codebase/core/api.dart';
 import 'package:codebase/core/app_utils.dart';
 import 'package:codebase/data/model/user.dart';
 import 'package:codebase/data/model/user_response.dart';
@@ -11,7 +12,7 @@ class UserListCubit extends Cubit<UserListState> {
 
   UserListCubit() : super(UserListLoadingState());
 
-  final _repository = UserRepository();
+  final _repository = UserRepository(api: API(), appUtils: AppUtils());
   final _appUtils = AppUtils();
 
   loadData({BuildContext? context, required UserResponse userResponse}) async {
