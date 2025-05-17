@@ -32,7 +32,7 @@ lib/
 
 <div align="center">
   <img src="assets/screenshots/home_screen.png" alt="Home Screen" width="240"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="assets/screenshots/user_details.png" alt="User Detail Screen" width="240"/>
 </div>
 
