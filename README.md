@@ -6,7 +6,7 @@ A Flutter application demonstrating clean architecture using **Cubit (BLoC)**, *
 
 ## 🚀 How to Run the Project
 
-- Clone the repo
+### Clone the repo
   git clone https://github.com/Anindya-Duti-Dhar/codebase.git
 
 - Navigate to project directory
