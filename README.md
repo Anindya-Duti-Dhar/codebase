@@ -9,13 +9,16 @@ Write the following command step by step and run the project.
 <div> 
  # Clone the repo
  git clone https://github.com/yourusername/project-repo.git
-
+</div>
+<div>
  # Navigate to project directory
  cd project-repo
-
+</div>
+<div>
  # Get dependencies
  flutter pub get
-
+</div>
+<div>
  # Run on connected device or emulator
  flutter run
 </div>
