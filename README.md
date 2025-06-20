@@ -8,7 +8,7 @@ A Flutter application demonstrating clean architecture using **Cubit (BLoC)**, *
 Write the following command step by step and run the project.
 <pre lang="markdown"> ``` 
  # Clone the repo
- git clone https://github.com/yourusername/project-repo.git
+ git clone https://github.com/BrainStation23HR/Flutter_Anindya.git
 
  # Navigate to project directory
  cd project-repo
@@ -21,12 +21,11 @@ Write the following command step by step and run the project.
  ``` </pre>
 
 ## 🛠️ Environment Setup
-
 - Flutter version: 3.29.3
 - Dart version: 3.7.2
 - Android Studio / VS Code
 - Tested on Android API level 35 Simulator
-
+- 
 ## 🚀 Features
 
 - ✅ BLoC Cubit state management
