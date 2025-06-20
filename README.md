@@ -5,7 +5,7 @@ A Flutter application demonstrating clean architecture using **Cubit (BLoC)**, *
 ---
 
 ## 🚀 How to Run the Project
-
+Write the following command step by step and run the project.
 #### Clone the repo
   git clone https://github.com/Anindya-Duti-Dhar/codebase.git
 
@@ -17,6 +17,13 @@ A Flutter application demonstrating clean architecture using **Cubit (BLoC)**, *
 
 #### Run on connected device or emulator
   flutter run
+
+## 🛠️ Environment Setup
+
+- Flutter version: 3.29.3
+- Dart version: 3.7.2
+- Android Studio / VS Code
+- Tested on Android API level 35 Simulator
 
 ## 🚀 Features
 
