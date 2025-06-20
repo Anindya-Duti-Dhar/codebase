@@ -6,15 +6,18 @@ A Flutter application demonstrating clean architecture using **Cubit (BLoC)**, *
 
 ## 🚀 How to Run the Project
 Write the following command step by step and run the project.
-<div align="center"> 
-  # Clone the repo
-  git clone https://github.com/Anindya-Duti-Dhar/codebase.git <br></br>
-  # Navigate to project directory
-  cd project-repo<br></br>
-  # Get dependencies
-  flutter pub get<br></br>
-  # Run on connected device or emulator
-  flutter run
+<div> 
+ # Clone the repo
+ git clone https://github.com/yourusername/project-repo.git
+
+ # Navigate to project directory
+ cd project-repo
+
+ # Get dependencies
+ flutter pub get
+
+ # Run on connected device or emulator
+ flutter run
 </div>
 
 ## 🛠️ Environment Setup
